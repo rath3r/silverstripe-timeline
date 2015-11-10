@@ -1,5 +1,3 @@
 <?php
-SiteTree::add_extension('CarouselPage');
+SiteTree::add_extension('TimelinePage');
 
-// Disable hash re-writing
-SSViewer::setOption('rewriteHashlinks', false);

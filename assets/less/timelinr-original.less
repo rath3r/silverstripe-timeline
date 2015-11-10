@@ -1,0 +1,233 @@
+#time-line-holder {
+
+  a {
+    //  color: #ffffcc;
+    text-decoration: none;
+    //    -webkit-transition: 0.5s;
+    //    -moz-transition: 0.5s;
+    //    -o-transition: 0.5s;
+    //    -ms-transition: 0.5s;
+    //    transition: 0.5s;
+    outline: 0;
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:link,
+    &:visited,
+    &.selected {
+      //    color: #ffcc00;
+      outline: 0;
+//      border: 1px solid red;
+    }
+  }
+
+  h1,h2,h4,h5,h6 {
+    text-align: center;
+    color: #ccc;
+    text-shadow: #000 1px 1px 2px;
+    margin-bottom: 5px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 14px;
+  }
+
+  .sociales {
+
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+
+  #timeline {
+
+    width: @width;
+    height: 224px;
+    overflow: hidden;
+    margin: 100px auto;
+    position: relative;
+    background: url('../images/dot.png') left 55px repeat-x;
+
+  }
+
+  #dates {
+
+    width: @inner-width;
+    height: 80px;
+    overflow: hidden;
+
+    li {
+
+      font-family: @montserratregular;
+      font-weight: bold;
+      list-style: none;
+
+      float: left;
+      width: 100px;
+      height: 65px;
+
+      text-align: center;
+      background: url('../images/biggerdot.png') center bottom no-repeat;
+
+      a {
+
+        line-height: 38px;
+        padding-bottom: 10px;
+        color: @bright-turquoise;
+        font-size: 20px;
+
+      }
+
+      &.selected {
+
+        background: url('../images/biggerdot-selected.png') center bottom no-repeat;
+        height: 70px;
+
+        a {
+
+          color: @white;
+          font-size: 34px;
+        }
+      }
+    }
+  }
+
+  #issues {
+
+//    width: @inner-width;
+//    width: 800px;
+    height: 350px;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+
+    li {
+
+      width: 1156px;
+
+      //      margin-left: @inner-margin-left;
+
+      height: 350px;
+      list-style: none;
+      float: left;
+
+      //    &.selected {
+      //
+      //      img {
+      //
+      //        -webkit-transform: scale(1.1,1.1);
+      //        -moz-transform: scale(1.1,1.1);
+      //        -o-transform: scale(1.1,1.1);
+      //        -ms-transform: scale(1.1,1.1);
+      //        transform: scale(1.1,1.1);
+      //
+      //      }
+      //    }
+
+      div{
+
+        padding: 0px;
+        margin: 0px 100px;
+
+        div.image{
+
+          float: left;
+          width: 40%;
+          padding: 0px;
+          margin: 0px;
+
+          img {
+
+            max-height: 110px;
+
+          }
+        }
+
+        div.copy{
+
+          color: @white;
+          float: right;
+          text-align: left;
+          width: 60%;
+          padding: 0px;
+          margin: 0px;
+
+          h1 {
+
+            font-size: 48px;
+            margin: 20px 0;
+
+          }
+
+          p {
+
+            font-family: @montserratlight;
+            font-size: 24px;
+            font-weight: normal;
+
+          }
+        }
+      }
+    }
+  }
+
+  #grad_left,
+  #grad_right {
+    width: 100px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+  }
+  #grad_left {
+    left: 0;
+    //    background: url('../images/grad_left.png') repeat-y;
+    background-image:
+    linear-gradient(
+            to right,
+            @dark-blue, rgba(0, 0, 0, 0)
+    );
+  }
+  #grad_right {
+    right: 0;
+    //    background: url('../images/grad_right.png') repeat-y;
+    background-image:
+    linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0), @dark-blue
+    );
+  }
+
+  #next,
+  #prev {
+    position: absolute;
+    top: 0;
+    font-size: 70px;
+    top: 100px;
+    width: 35px;
+    height: 52px;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  #next:hover,
+  #prev:hover {
+    background-position: 0 -52px;
+  }
+  #next {
+    right: 0;
+    background-image: url('../images/next.png');
+  }
+  #prev {
+    left: 0;
+    background-image: url('../images/prev.png');
+  }
+  #next.disabled,
+  #prev.disabled {
+    opacity: 0.2;
+  }
+}

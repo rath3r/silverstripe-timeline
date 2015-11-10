@@ -1,11 +1,10 @@
 <?php
 
 /**
- * Representation of a slide object that can be extended to add extra
- * data (such as links, additional content, etc)
+ * Representation of an event within the timeline.
  * 
- * @author i-lateral (http://www.i-lateral.com)
- * @package carousel
+ * @author Thomas Meehan
+ * @package timeline
  */
 class TimelineEvent extends DataObject {
 
@@ -50,6 +49,15 @@ class TimelineEvent extends DataObject {
         $fields->removeByName('Sort');
 
         $fields->addFieldsToTab('Root.Main', new HtmlEditorField('Content', 'Content'));
+
+        $fields->addFieldToTab(
+            'Root.Main',
+            $uploadField = new UploadField(
+                $name = 'Image',
+                $title = 'Upload a timeline image:'
+            )
+        );
+        $uploadField->setFolderName('timelineImages');
 
         return $fields;
     }

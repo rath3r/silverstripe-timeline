@@ -89,6 +89,12 @@ class TimelinePage extends DataExtension {
 
     public function Timeline() {
 
+        Requirements::css("timeline/css/timeline.css");
+
+        // Moved to the page Controller to resolve positioning issues
+        // Requirements::set_force_js_to_bottom(false);
+        // Requirements::javascript("timeline/js/timelinr.js");
+
         return $this
             ->owner
             ->renderWith(
