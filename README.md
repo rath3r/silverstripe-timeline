@@ -1,13 +1,9 @@
-Living Group Silverstripe Timeline Module
+Silverstripe Timeline Module
 =========================================
 
-Timeline module for the Silverstripe CMS used in Living Group sites.
+Timeline module for the Silverstripe CMS.
 
 ## Author
-
-This module was created by Thomas.
-
-And is being extended by Living Group.
 
 Uses [jQuery-Timelinr](https://github.com/juanbrujo/jQuery-Timelinr) as inspiration
 
@@ -45,5 +41,5 @@ init function in the `TimelinePage.php` extension.
 
 ## Styling
 
-For the first project using this plugin [cfm](https://www.cfm.fr) the styling has bee added to the `assets` included in 
+For the first project using this plugin the styling has bee added to the `assets` included in 
 the plugin but perhaps it should be moved to the site's theme directory.
